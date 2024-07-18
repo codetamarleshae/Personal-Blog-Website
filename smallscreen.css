@@ -1,0 +1,26 @@
+@media (max-width: 600px) {
+    .header {
+        font-size: 1.2rem;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .main-content {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "box1"
+            "box2"
+            "box3"
+            "aside"
+            "footer";
+    }
+    aside {
+        height: auto;
+    }
+    .footer {
+        position: static;
+        width: 100%;
+    }
+}
