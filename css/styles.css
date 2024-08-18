@@ -1,0 +1,174 @@
+@import url(./bloglargescreen.css);
+@import url(./mediumscreen.css);
+@import url(./smallscreen.css);
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap');
+
+
+body {
+    font-family: "Arsenal", sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    background-color: pink;
+    width: 100%;
+}
+
+
+
+.navbar button {
+    background-color: palevioletred;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: dashed;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+.profile-pic {
+    max-width: 100%;
+    border-radius: 10%;
+    width: 90%;
+    height: 40%;
+    margin: none;
+    padding-left: 15px;
+    object-fit: contain;
+}
+
+
+.linkedin-logo {
+    width:30px;
+    height: 30px;
+}
+
+
+.header {
+    text-align: center;
+    background-color: pink;
+    border: 1px solid orchid;
+    color: rgb(176, 117, 199);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.main-content {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "aside box1 box2"
+        "aside box3 box3"
+        "aside box3 box3 "
+        "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    gap: 10px;
+    padding: 1rem;
+}
+
+
+
+aside {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    grid-area: aside;
+    width: 100%;
+    height: auto;
+    background-color: lightpink;
+    justify-content: flex-start;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    white-space: normal;
+    font-size: small;
+}
+
+
+
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    grid-area: box1;
+    background-color: rgb(176, 117, 199);
+    width: 90%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: smaller;
+}
+
+
+.box2 {
+    display: flex;
+    flex-direction: column;
+    grid-area: box2;
+    background-color: rgba(214, 78, 173, 0.788);
+    width: 95%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: smaller;
+}
+
+.box3 {
+    display: flex;
+    flex-direction: column;
+    grid-area: box3;
+    background-color:rgb(253, 87, 176);
+    width: 98%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 100px;
+    font-size: smaller;
+
+}
+
+.footer {
+    background-color:palevioletred;
+    text-align: center;
+    width: 100%;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+
+@media (max-width: 600px) {
+    .main-content {
+        grid-template-areas: 
+            "header"
+            "box1"
+            "box2"
+            "box3"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .box1, .box2, .box3, .aside {
+        width: 100%;
+    }
+}
